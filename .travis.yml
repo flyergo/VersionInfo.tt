@@ -1,4 +1,11 @@
 language: csharp
 solution: src/VersionInfo.sln
+install:
+  - nuget restore src/VersionInfo.sln
+  - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
   - chmod a+x ./Make.sh
+  - xbuild /p:Configuration=Release src/VersionInfo.sln
+  - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./src/VersionInfo.Tests/bin/Release/VersionInfo.Tests.dll
+mono:
+  - latest

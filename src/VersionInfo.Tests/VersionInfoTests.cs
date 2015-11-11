@@ -1,13 +1,16 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Reflection;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Diagnostics;
+using System.Reflection;
+using Assert = NUnit.Framework.Assert;
 
 namespace VersionInfo.Tests
 {
+    [TestFixture]
     [TestClass]
     public class VersionInfoTests
     {
+        [Test]
         [TestMethod]
         public void GetMajorVersion()
         {
@@ -16,14 +19,17 @@ namespace VersionInfo.Tests
             Assert.IsTrue(assemblyName.Version.Major >= 0);
         }
 
+        [Test]
         [TestMethod]
         public void GetMinorVersion()
         {
             var assemblyName = Assembly.GetExecutingAssembly().GetName();
 
             Assert.IsTrue(assemblyName.Version.Minor >= 0);
+           
         }
 
+        [Test]
         [TestMethod]
         public void GetPatchVersion()
         {
@@ -32,6 +38,7 @@ namespace VersionInfo.Tests
             Assert.IsTrue(assemblyName.Version.Revision >= 0);
         }
 
+        [Test]
         [TestMethod]
         public void GetBuildVersion()
         {
@@ -40,6 +47,7 @@ namespace VersionInfo.Tests
             Assert.IsTrue(assemblyName.Version.Build >= 0);
         }
 
+        [Test]
         [TestMethod]
         public void GetVersion()
         {
@@ -48,6 +56,7 @@ namespace VersionInfo.Tests
             Assert.IsNotNull(assemblyName.Version);
         }
 
+        [Test]
         [TestMethod]
         public void GetFileVersion()
         {
@@ -56,6 +65,7 @@ namespace VersionInfo.Tests
             Assert.IsNotNull(fileVersion.FileVersion);
         }
 
+        [Test]
         [TestMethod]
         public void GetProductVersion()
         {
