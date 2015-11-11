@@ -12,6 +12,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VersionInfo", "VersionInfo"
 		..\VersionInfo.tt = ..\VersionInfo.tt
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{70508E82-552C-4512-B9EE-1646509D1B88}"
+	ProjectSection(SolutionItems) = preProject
+		..\tools\TextTransform.exe = ..\tools\TextTransform.exe
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
