@@ -1,0 +1,1 @@
+Tools\TextTransform.exe VersionInfo.tt
