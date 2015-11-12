@@ -4,7 +4,7 @@ install:
   - nuget restore src/VersionInfo.sln
   - nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
 script:
-  - chmod a+x ./tools/TextTransform.exe ./VersionInfo.tt
+  - chmod a+x tools/TextTransform.exe VersionInfo.tt
   - xbuild /p:Configuration=Release src/VersionInfo.sln
   - mono ./testrunner/NUnit.Runners.2.6.4/tools/nunit-console.exe ./src/VersionInfo.Tests/bin/Release/VersionInfo.Tests.dll
 mono:
