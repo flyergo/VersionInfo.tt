@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System.Diagnostics;
 using System.Reflection;
 using Assert = NUnit.Framework.Assert;
@@ -7,11 +6,9 @@ using Assert = NUnit.Framework.Assert;
 namespace VersionInfo.Tests
 {
     [TestFixture]
-    [TestClass]
     public class VersionInfoTests
     {
         [Test]
-        [TestMethod]
         public void GetMajorVersion()
         {
             var assemblyName = Assembly.GetExecutingAssembly().GetName();
@@ -20,7 +17,6 @@ namespace VersionInfo.Tests
         }
 
         [Test]
-        [TestMethod]
         public void GetMinorVersion()
         {
             var assemblyName = Assembly.GetExecutingAssembly().GetName();
@@ -30,7 +26,6 @@ namespace VersionInfo.Tests
         }
 
         [Test]
-        [TestMethod]
         public void GetPatchVersion()
         {
             var assemblyName = Assembly.GetExecutingAssembly().GetName();
@@ -39,7 +34,6 @@ namespace VersionInfo.Tests
         }
 
         [Test]
-        [TestMethod]
         public void GetBuildVersion()
         {
             var assemblyName = Assembly.GetExecutingAssembly().GetName();
@@ -48,7 +42,6 @@ namespace VersionInfo.Tests
         }
 
         [Test]
-        [TestMethod]
         public void GetVersion()
         {
             var assemblyName = Assembly.GetExecutingAssembly().GetName();
@@ -57,7 +50,6 @@ namespace VersionInfo.Tests
         }
 
         [Test]
-        [TestMethod]
         public void GetFileVersion()
         {
             var fileVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location);
@@ -66,7 +58,6 @@ namespace VersionInfo.Tests
         }
 
         [Test]
-        [TestMethod]
         public void GetProductVersion()
         {
             var fileVersion = FileVersionInfo.GetVersionInfo(Assembly.GetExecutingAssembly().Location);
